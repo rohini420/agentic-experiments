@@ -1,0 +1,51 @@
+name: Deploy to ECS
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build & push image
+        run: |
+          IMAGE=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPO }}
+          docker build -t $IMAGE:${{ github.sha }} .
+          docker tag $IMAGE:${{ github.sha }} $IMAGE:latest
+          docker push $IMAGE:${{ github.sha }}
+          docker push $IMAGE:latest
+          echo "IMAGE=$IMAGE" >> $GITHUB_ENV
+
+      - name: Deploy to ECS
+        run: |
+          # update task def to use the new :latest image
+          FAMILY="agentic-poc"
+          TD=$(aws ecs describe-task-definition --task-definition $FAMILY)
+          NEW_TD=$(echo "$TD" | \
+            jq '.taskDefinition |
+                {family,networkMode,executionRoleArn,taskRoleArn,requiresCompatibilities,cpu,memory,ipcMode,pidMode,
+                 containerDefinitions: (.containerDefinitions | map(.image=env.IMAGE+":latest"))}')
+          aws ecs register-task-definition --cli-input-json "$NEW_TD" > out.json
+          NEW_ARN=$(jq -r '.taskDefinition.taskDefinitionArn' out.json)
+          aws ecs update-service \
+            --cluster agentic-poc \
+            --service agentic-poc-staging \
+            --task-definition "$NEW_ARN" \
+            --force-new-deployment \
+            --no-cli-pager
+

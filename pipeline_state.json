@@ -1,0 +1,162 @@
+[
+  {
+    "timestamp": "2025-11-12T04:49:50.291466",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T04:49:50.329750",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-12T04:49:50.330504",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-12T04:57:20.800479",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T04:57:20.828642",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-12T04:57:20.829682",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-12T04:58:46.386036",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T04:58:46.405848",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-12T04:58:46.406573",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-12T05:10:37.585629",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T05:10:37.608156",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-12T05:10:37.608948",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-12T05:12:21.260133",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T05:12:21.279184",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-12T05:12:21.279934",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-12T05:14:58.766431",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T05:14:58.789217",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-12T05:14:58.790001",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-12T05:19:54.783971",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T05:19:54.806379",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-12T05:19:54.807169",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-12T05:20:27.018378",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T05:20:27.042190",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-12T05:20:27.042988",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-12T05:30:30.863463",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T05:30:30.891926",
+    "step": "smoke_test",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T05:43:53.645876",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T05:43:53.677236",
+    "step": "smoke_test",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T06:07:18.548461",
+    "step": "deploy",
+    "status": "started"
+  },
+  {
+    "timestamp": "2025-11-12T06:20:19.382724",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T06:20:19.413559",
+    "step": "smoke_test",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-12T06:23:12.260960",
+    "step": "deploy",
+    "status": "started"
+  }
+]

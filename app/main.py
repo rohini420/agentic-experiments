@@ -8,7 +8,7 @@ def root():
     return jsonify({
         "app": os.getenv("APP_NAME", "agentic-poc"),
         "env": os.getenv("ENV", "local"),
-        "message": "hello from AI Agents POC – updated!",
+        "message": "hello from AI Agents POC",
     })
 
 if __name__ == "__main__":
