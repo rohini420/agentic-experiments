@@ -188,5 +188,25 @@
     "timestamp": "2025-11-14T02:44:35.460615",
     "step": "deployment",
     "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-14T05:01:05.338948",
+    "step": "github_dispatch",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-14T05:01:11.920269",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-14T05:01:11.952858",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-14T05:01:11.953821",
+    "step": "deployment",
+    "status": "stopped"
   }
 ]

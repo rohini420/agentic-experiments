@@ -1,6 +1,9 @@
 import os
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
 from langgraph.graph import StateGraph
-
+from dotenv import load_dotenv
+load_dotenv()
 # Step functions
 from agents.llm_decision_agent import llm_decision
 from agents.git_trigger_agent import trigger_git_push        
