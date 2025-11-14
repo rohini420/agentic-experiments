@@ -20,8 +20,9 @@ def trigger_github_action(state):
     url = f"https://api.github.com/repos/{repo}/actions/workflows/{workflow}/dispatches"
 
     headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json",
+    "Authorization": f"Bearer {token}",
+    "Accept": "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28"
     }
 
     data = {
