@@ -158,5 +158,35 @@
     "timestamp": "2025-11-12T06:23:12.260960",
     "step": "deploy",
     "status": "started"
+  },
+  {
+    "timestamp": "2025-11-14T02:40:23.266102",
+    "step": "trivy_scan",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-14T02:40:23.339987",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-14T02:40:23.341253",
+    "step": "deployment",
+    "status": "stopped"
+  },
+  {
+    "timestamp": "2025-11-14T02:44:35.420160",
+    "step": "trivy_scan",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-14T02:44:35.459571",
+    "step": "smoke_test",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-14T02:44:35.460615",
+    "step": "deployment",
+    "status": "stopped"
   }
 ]

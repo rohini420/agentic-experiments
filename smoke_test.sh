@@ -12,7 +12,7 @@ response=$(curl -s --fail "http://${APP_URL}/") || {
 
 echo "Response: $response"
 
-if echo "$response" | grep -q 'hello from AI Agents POC'; then
+if echo "$response" | grep -q 'hello from AI Agents POC TEST'; then
   echo "✅ Smoke test passed!"
 else
   echo "❌ Smoke test failed!"
