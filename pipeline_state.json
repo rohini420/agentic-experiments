@@ -283,5 +283,30 @@
     "timestamp": "2025-11-14T06:04:03.078318",
     "step": "deploy",
     "status": "started"
+  },
+  {
+    "timestamp": "2025-11-14T06:11:00.060714",
+    "step": "git_push",
+    "status": "success"
+  },
+  {
+    "timestamp": "2025-11-14T06:11:00.163671",
+    "step": "github_dispatch",
+    "status": "failed"
+  },
+  {
+    "timestamp": "2025-11-14T06:11:00.751768",
+    "step": "trivy_scan",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-14T06:11:00.784478",
+    "step": "smoke_test",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-11-14T06:11:15.557963",
+    "step": "deploy",
+    "status": "started"
   }
 ]
